@@ -3,4 +3,13 @@
     <string name="app_name">Laboratório Android</string>
     <string name="hello_message">Olá Mundo!</string>
     <string name="ButtonText">Eu sou um botão</string>
+    <string name="CheckBoxText">Veja isso!</string>
+    <string name="FlagName">Bandeira do Brasil</string>
+    <string name="SwitchText">Interruptor ligado / desligado</string>
+    <string name="TextFieldHint">Digite aqui</string>
+    <string name="toast_message">Mais informações aqui</string>
+    <string name="checkbox_ON_message">Caixa de seleção selecionada</string>
+    <string name="checkbox_OFF_message">Caixa de seleção desmarcada</string>
+    <string name="switch_ON_message">Interruptor ligado</string>
+    <string name="switch_OFF_message">Interruptor desligado</string>
 </resources>
