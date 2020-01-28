@@ -12,4 +12,16 @@
     <string name="checkbox_OFF_message">Caixa de seleção desmarcada</string>
     <string name="switch_ON_message">Interruptor ligado</string>
     <string name="switch_OFF_message">Interruptor desligado</string>
+    <string name="your_profile">Seu perfil</string>
+    <string name="your_name">Seu nome:</string>
+    <string name="enter_your_name">Digite seu nome</string>
+    <string name="your_email">Seu email:</string>
+    <string name="enter_your_email">Digite seu email</string>
+    <string name="your_picture">Sua foto:</string>
+    <string name="imageButtonLabel">Clique no botão abaixo para tirar uma foto:</string>
+    <string name="imageDescription">Foto da câmera do aparelho</string>
+    <string name="enter_your_email_address">Digite seu endereço de email:</string>
+    <string name="type_email_here">Digite seu email aqui</string>
+    <string name="type_your_password">Digite sua senha:</string>
+    <string name="login">Logar</string>
 </resources>

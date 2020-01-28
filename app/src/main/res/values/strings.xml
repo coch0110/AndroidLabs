@@ -11,4 +11,16 @@
     <string name="checkbox_OFF_message">Checkbox is unchecked</string>
     <string name="switch_ON_message">Switch button is ON</string>
     <string name="switch_OFF_message">Switch button is OFF</string>
+    <string name="your_profile">Your profile</string>
+    <string name="your_name">Your name:</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="your_email">Your email:</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="your_picture">Your picture:</string>
+    <string name="imageButtonLabel">Click the button above to take a picture:</string>
+    <string name="imageDescription">Picture from device\'s camera</string>
+    <string name="enter_your_email_address">Enter your email address:</string>
+    <string name="type_email_here">Type email here</string>
+    <string name="type_your_password">Type your password:</string>
+    <string name="login">Login</string>
 </resources>
