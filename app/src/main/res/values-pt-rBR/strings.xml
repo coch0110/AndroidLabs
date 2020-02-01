@@ -18,10 +18,19 @@
     <string name="your_email">Seu email:</string>
     <string name="enter_your_email">Digite seu email</string>
     <string name="your_picture">Sua foto:</string>
-    <string name="imageButtonLabel">Clique no botão abaixo para tirar uma foto:</string>
+    <string name="imageButtonLabel">Clique no botão abaixo para tirar uma foto</string>
     <string name="imageDescription">Foto da câmera do aparelho</string>
     <string name="enter_your_email_address">Digite seu endereço de email:</string>
     <string name="type_email_here">Digite seu email aqui</string>
     <string name="type_your_password">Digite sua senha:</string>
     <string name="login">Logar</string>
+    <string name="delete_confirmation">Deseja deletar este item?</string>
+    <string name="row_info_text">A linha selecionada é: </string>
+    <string name="database_info_text">\nA id da database é: </string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="send_btn">Enviar</string>
+    <string name="type_here_hint">Digite aqui</string>
+    <string name="receive_btn">Receber</string>
+    <string name="go_to_chat_btn">Ir para o bate-papo</string>
 </resources>
