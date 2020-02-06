@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class ChatRoomActivity extends AppCompatActivity {
         ListView myList = findViewById(R.id.chat);
         myList.setAdapter(myAdapter = new MyListAdapter());
 
-        myList.setOnItemLongClickListener(((parent, view, position, id) -> {
+        myList.setOnItemLongClickListener((parent, view, position, id) -> {
             new AlertDialog.Builder(ChatRoomActivity.this)
                     .setTitle(getString(R.string.delete_confirmation))
                     .setMessage(getString(R.string.row_info_text) + position +
@@ -55,7 +56,7 @@ public class ChatRoomActivity extends AppCompatActivity {
                         })
                     .show();
             return true;
-            }));
+            });
     }
 
     class MyListAdapter extends BaseAdapter{
@@ -76,10 +77,12 @@ public class ChatRoomActivity extends AppCompatActivity {
 
             if(elements.get(position).getType()){
                 theText.setGravity(Gravity.START);
-                theText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.row_send, 0, 0, 0);}
+                theText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.row_send, 0, 0, 0);
+                Log.e("Me", "TRUE");}
             else {
                 theText.setGravity(Gravity.END);
                 theText.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.row_receive, 0);
+                Log.e("Me", "FALSE");
             }
 
             theText.setText(getItem(position));
