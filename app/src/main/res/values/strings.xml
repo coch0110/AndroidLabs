@@ -32,4 +32,6 @@
     <string name="type_here_hint">Type here</string>
     <string name="receive_btn">Receive</string>
     <string name="go_to_chat_btn">Go to chat</string>
+    <string name="buttonWeatherForecastText">Weather Forecast</string>
+    <string name="current_weather">Current Weather</string>
 </resources>

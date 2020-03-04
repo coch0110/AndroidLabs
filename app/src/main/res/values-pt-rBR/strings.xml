@@ -33,4 +33,6 @@
     <string name="type_here_hint">Digite aqui</string>
     <string name="receive_btn">Receber</string>
     <string name="go_to_chat_btn">Ir para o bate-papo</string>
+    <string name="buttonWeatherForecastText">Previsão do Tempo</string>
+    <string name="current_weather">Clima Atual</string>
 </resources>
