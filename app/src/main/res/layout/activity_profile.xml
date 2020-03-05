@@ -1,75 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ProfileActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
 
-
-    <TextView
-        android:id="@+id/activityDescription"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/your_profile" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ProfileActivity"
+        android:padding="30dp">
 
-    <TextView
-        android:id="@+id/emailDescriptionProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/your_name" />
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/enter_your_name"
-        android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/activityDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_profile" />
 
-    <TextView
-        android:id="@+id/textViewEmailDescriptionProfileAct"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/your_email" />
+        <TextView
+            android:id="@+id/emailDescriptionProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_name" />
 
-    <EditText
-        android:id="@+id/textEmailProfileAct"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/enter_your_email"
-        android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_your_name"
+            android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/pictureDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/your_picture" />
+        <TextView
+            android:id="@+id/textViewEmailDescriptionProfileAct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_email" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/imageDescription"
-        android:src="@android:drawable/picture_frame" />
+        <EditText
+            android:id="@+id/textEmailProfileAct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_your_email"
+            android:inputType="textEmailAddress" />
 
-    <TextView
-        android:id="@+id/imageButtonExtraInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/imageButtonLabel" />
+        <TextView
+            android:id="@+id/pictureDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_picture" />
 
-    <Button
-        android:id="@+id/buttonGoToChat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/go_to_chat_btn" />
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageDescription"
+            android:src="@android:drawable/picture_frame" />
 
-    <Button
-        android:id="@+id/buttonWeatherForecast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonWeatherForecastText" />
+        <TextView
+            android:id="@+id/imageButtonExtraInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/imageButtonLabel" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/buttonGoToChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_chat_btn" />
+
+        <Button
+            android:id="@+id/buttonWeatherForecast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonWeatherForecastText" />
+
+    </LinearLayout>
+</ScrollView>
