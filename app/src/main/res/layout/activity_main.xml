@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
 
     <TextView
         android:id="@+id/emailDescriptionMain"
@@ -15,7 +19,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/type_email_here"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:nextFocusDown="@id/passwordMain"
+        android:nextFocusUp="@id/loginButton" />
 
     <TextView
         android:id="@+id/passwordDescriptionMain"
@@ -28,11 +34,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:nextFocusDown="@id/loginButton"
+        android:nextFocusUp="@id/emailMain" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login" />
+
 </LinearLayout>
