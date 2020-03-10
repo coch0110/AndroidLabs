@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -33,6 +35,8 @@ public class ChatRoomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_room);
+        boolean isTablet = findViewById(R.id.frameLayout) != null;
+
         EditText typeField = findViewById(R.id.editTextMessage);
         loadDataFromDatabase();
 
@@ -63,6 +67,11 @@ public class ChatRoomActivity extends AppCompatActivity {
 
         ListView myList = findViewById(R.id.chat);
         myList.setAdapter(myAdapter = new MyListAdapter());
+        myList.setOnItemClickListener((parent, view, position, id) -> {
+            Button login = findViewById(R.id.loginButton);
+            Intent goToProfile = new Intent(ChatRoomActivity.this, DetailsFragment.class);
+
+        });
 
         myList.setOnItemLongClickListener((parent, view, position, id) -> {
             new AlertDialog.Builder(ChatRoomActivity.this)

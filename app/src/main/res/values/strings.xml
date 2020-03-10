@@ -34,4 +34,7 @@
     <string name="go_to_chat_btn">Go to chat</string>
     <string name="buttonWeatherForecastText">Weather Forecast</string>
     <string name="current_weather">Current Weather</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Message Here</string>
 </resources>

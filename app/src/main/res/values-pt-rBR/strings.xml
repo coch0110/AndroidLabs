@@ -35,4 +35,5 @@
     <string name="go_to_chat_btn">Ir para o bate-papo</string>
     <string name="buttonWeatherForecastText">Previsão do Tempo</string>
     <string name="current_weather">Clima Atual</string>
+    <string name="hello_blank_fragment">Message Here</string>
 </resources>
