@@ -2,6 +2,7 @@ package com.example.androidlabs;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -23,12 +24,17 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ChatRoomActivity extends AppCompatActivity {
 
     private ArrayList<MessageType> elements = new ArrayList<>();
     private MyListAdapter myAdapter;
     SQLiteDatabase db;
+    public static final String ITEM_SELECTED = "ITEM";
+    public static final String ITEM_POSITION = "POSITION";
+    public static final String ITEM_ID = "ID";
+    public static final String ITEM_TYPE = "TYPE";
 
 
     @Override
@@ -68,9 +74,27 @@ public class ChatRoomActivity extends AppCompatActivity {
         ListView myList = findViewById(R.id.chat);
         myList.setAdapter(myAdapter = new MyListAdapter());
         myList.setOnItemClickListener((parent, view, position, id) -> {
-            Button login = findViewById(R.id.loginButton);
-            Intent goToProfile = new Intent(ChatRoomActivity.this, DetailsFragment.class);
+            Bundle dataToPass = new Bundle();
+            dataToPass.putString(ITEM_SELECTED, elements.get(position).getMessage());
+            dataToPass.putString(ITEM_TYPE, elements.get(position).getType());
+            dataToPass.putInt(ITEM_POSITION, position);
+            dataToPass.putLong(ITEM_ID, id);
 
+            if(isTablet)
+            {
+                DetailsFragment dFragment = new DetailsFragment(); //add a DetailFragment
+                dFragment.setArguments( dataToPass ); //pass it a bundle for information
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.frameLayout, dFragment) //Add the fragment in FrameLayout
+                        .commit(); //actually load the fragment.
+            }
+            else //isPhone
+            {
+                Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+                nextActivity.putExtras(dataToPass); //send data to next activity
+                startActivity(nextActivity); //make the transition
+            }
         });
 
         myList.setOnItemLongClickListener((parent, view, position, id) -> {
@@ -81,6 +105,9 @@ public class ChatRoomActivity extends AppCompatActivity {
                     .setPositiveButton(getString(R.string.yes),(dialog, item) -> {
                         deleteMessage(elements.get(position));
                         elements.remove(position);
+                        List<Fragment> fragments = getSupportFragmentManager().getFragments();
+                        if (!fragments.isEmpty())
+                            getSupportFragmentManager().beginTransaction().remove(fragments.get(0)).commit();
                         myAdapter.notifyDataSetChanged();
                         })
                     .setNegativeButton(getString(R.string.no), (dialog, item) -> {
