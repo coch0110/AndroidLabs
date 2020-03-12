@@ -159,30 +159,9 @@ public class ChatRoomActivity extends AppCompatActivity {
         View contact_view = getLayoutInflater().inflate(R.layout.row_layout, null);
         //get the TextViews
         EditText rowName = contact_view.findViewById(R.id.editTextMessage);
-//        EditText rowType = contact_view.findViewById(R.id.row_email);
-//        TextView rowId = contact_view.findViewById(R.id.row_id);
 
         //set the fields for the alert dialog
         rowName.setText(selectedContact.getMessage());
-//        rowEmail.setText(selectedContact.getEmail());
-//        rowId.setText("id:" + selectedContact.getId());
-
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        builder.setTitle("You clicked on item #" + position)
-//                .setMessage("You can update the fields and then click update to save in the database")
-//                .setView(contact_view) //add the 3 edit texts showing the contact information
-//                .setPositiveButton("Update", (click, b) -> {
-//                    selectedContact.update(rowName.getText().toString(), rowEmail.getText().toString());
-//                    updateContact(selectedContact);
-//                    myAdapter.notifyDataSetChanged(); //the email and name have changed so rebuild the list
-//                })
-//                .setNegativeButton("Delete", (click, b) -> {
-//                    deleteContact(selectedContact); //remove the contact from database
-//                    contactsList.remove(position); //remove the contact from contact list
-//                    myAdapter.notifyDataSetChanged(); //there is one less item so update the list
-//                })
-//                .setNeutralButton("dismiss", (click, b) -> { })
-//                .create().show();
     }
 
     protected void updateMessage(MessageType c)
@@ -227,10 +206,7 @@ public class ChatRoomActivity extends AppCompatActivity {
                 theText.setGravity(Gravity.END);
                 theText.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.row_receive, 0);
             }
-
-//            theText.setText(getItem(position));
             theText.setText(message.getMessage());
-
             return newView;
         }
     }

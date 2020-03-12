@@ -78,5 +78,12 @@
             android:layout_height="wrap_content"
             android:text="@string/buttonWeatherForecastText" />
 
+        <Button
+            android:id="@+id/buttonGoToToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go To Toolbar Page" />
+
     </LinearLayout>
+
 </ScrollView>

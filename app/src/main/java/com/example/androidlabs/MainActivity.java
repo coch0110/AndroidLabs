@@ -24,10 +24,8 @@ public class MainActivity extends AppCompatActivity {
         String savedString = prefs.getString("ReserveName", typeField.getText().toString());
         typeField.setText(savedString);
 
-
         Button login = findViewById(R.id.loginButton);
         Intent goToProfile = new Intent(MainActivity.this, ProfileActivity.class);
-
 
         login.setOnClickListener( click -> {goToProfile.putExtra("EMAIL", typeField.getText().toString());
                                             startActivity( goToProfile );});

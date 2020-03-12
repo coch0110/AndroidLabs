@@ -17,7 +17,6 @@ public class ProfileActivity extends AppCompatActivity {
     private ImageButton mImageButton;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.e(ACTIVITY_NAME,"In function:" + "onCreate()");
@@ -36,11 +35,13 @@ public class ProfileActivity extends AppCompatActivity {
         Intent goToChat = new Intent(ProfileActivity.this, ChatRoomActivity.class);
         chat.setOnClickListener(click -> startActivity(goToChat));
 
-
         Button wheaterForecast = findViewById(R.id.buttonWeatherForecast);
         Intent goToWeatherForecast = new Intent(ProfileActivity.this, WeatherForecast.class);
         wheaterForecast.setOnClickListener(click -> startActivity(goToWeatherForecast));
 
+        Button toolBarPage = findViewById(R.id.buttonGoToToolbar);
+        Intent goToToolbarPage = new Intent(ProfileActivity.this, TestToolbar.class);
+        toolBarPage.setOnClickListener(click -> startActivity(goToToolbarPage));
     }
 
     @Override
