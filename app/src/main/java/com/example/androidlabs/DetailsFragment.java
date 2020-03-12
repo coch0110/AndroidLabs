@@ -1,6 +1,7 @@
 package com.example.androidlabs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -51,8 +52,9 @@ public class DetailsFragment extends Fragment {
 
             //Tell the parent activity to remove
             parentActivity.getSupportFragmentManager().beginTransaction().remove(this).commit();
+            if (!dataFromActivity.getBoolean("IS_PHONE"))
+                getActivity().finish();
         });
-
         return result;
     }
 

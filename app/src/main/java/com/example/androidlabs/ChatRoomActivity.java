@@ -79,6 +79,7 @@ public class ChatRoomActivity extends AppCompatActivity {
             dataToPass.putString(ITEM_TYPE, elements.get(position).getType());
             dataToPass.putInt(ITEM_POSITION, position);
             dataToPass.putLong(ITEM_ID, id);
+            dataToPass.putBoolean("IS_PHONE", isTablet);
 
             if(isTablet)
             {
