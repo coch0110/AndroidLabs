@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/navDrawerChat"
+        android:title="Chat"
+        android:icon="@drawable/chat"
+        android:orderInCategory="1"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/navDrawerWeather"
+        android:title="Weather Forecast"
+        android:icon="@drawable/weather"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/navDrawerLogin"
+        android:icon="@drawable/login"
+        android:title="Login Page"
+        app:showAsAction="always"
+        android:orderInCategory="3"/>
+</menu>

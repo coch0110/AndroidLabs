@@ -41,7 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         Button toolBarPage = findViewById(R.id.buttonGoToToolbar);
         Intent goToToolbarPage = new Intent(ProfileActivity.this, TestToolbar.class);
-        toolBarPage.setOnClickListener(click -> startActivity(goToToolbarPage));
+        toolBarPage.setOnClickListener(click -> startActivityForResult(goToToolbarPage, 56));
     }
 
     @Override
@@ -76,11 +76,15 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.e(ACTIVITY_NAME,"In function:" + "onActivityResult()");
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.e(ACTIVITY_NAME, "In function:" + "onActivityResult()");
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageButton.setImageBitmap(imageBitmap);
+        }
+        if (resultCode == 500){
+            finish();
         }
     }
 
